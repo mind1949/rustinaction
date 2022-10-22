@@ -1,0 +1,29 @@
+[package]
+name = "ch7-actionkv"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+crc = "1.7"
+byteorder = "1.2"
+serde = "1"
+serde_derive = "1"
+bincode = "1"
+
+[lib]
+name = "libactionkv"
+path = "src/lib.rs"
+
+[[bin]]
+name = "akv_mem"
+path = "src/akv_mem.rs"
+
+[[bin]]
+name = "akv_diskidx"
+path = "src/akv_diskidx.rs"
+
+[[bin]]
+name = "akv_btree"
+path = "src/akv_btree.rs"

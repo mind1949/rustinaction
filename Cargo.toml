@@ -1,0 +1,9 @@
+[workspace]
+
+members = [
+    "ch6/ch6-particles",
+    "ch7/ch7-serde-eg",
+    "ch7/ch7-fview",
+    "ch7/ch7-actionkv1",
+    "ch7/ch7-actionkv",
+]
