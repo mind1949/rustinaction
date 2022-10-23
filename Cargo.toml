@@ -12,5 +12,6 @@ members = [
     "chp8/ch8-misc",
     "chp8/ch8-mac",
     "chp8/ch8-mget",
-    "ch9/ch9-clock1"
+    "ch9/ch9-clock1",
+    "ch9/ch9-clock2",
 ]

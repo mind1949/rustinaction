@@ -288,6 +288,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "ch9-clock2"
+version = "0.1.0"
+dependencies = [
+ "chrono",
+ "clap",
+ "kernel32-sys",
+ "libc",
+ "winapi 0.2.8",
+]
+
+[[package]]
 name = "chp8-rpg"
 version = "0.1.0"
 dependencies = [
