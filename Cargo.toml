@@ -6,4 +6,10 @@ members = [
     "ch7/ch7-fview",
     "ch7/ch7-actionkv1",
     "ch7/ch7-actionkv",
+    "chp8/chp8-rpg",
+    "chp8/ch8-stdlib",
+    "chp8/ch8-resolve",
+    "chp8/ch8-misc",
+    "chp8/ch8-mac",
+    "chp8/ch8-mget",
 ]

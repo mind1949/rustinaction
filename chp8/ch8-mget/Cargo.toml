@@ -1,0 +1,13 @@
+[package]
+name = "ch8-mget"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = "2"
+rand = "0.7"
+smoltcp = { version = "0.5",features = ["proto-igmp", "proto-ipv4", "verbose", "log"]}
+trust-dns = {version = "0.16",default-features = false}
+url = "2"

@@ -31,12 +31,12 @@ pub struct ActionKV {
 impl ActionKV {
     pub fn open(path: &Path) -> io::Result<Self> {
         let f = OpenOptions::new()
-        .read(true)
-        .write(true)
-        .create(true)
-        .append(true)
-        .open(path)?;
-        Ok(ActionKV{
+            .read(true)
+            .write(true)
+            .create(true)
+            .append(true)
+            .open(path)?;
+        Ok(ActionKV {
             f: f,
             index: HashMap::new(),
         })
@@ -66,7 +66,10 @@ impl ActionKV {
         let val = data.split_off(key_len as usize);
         let key = data;
 
-        Ok(KeyValuePair { key: key, value: val })
+        Ok(KeyValuePair {
+            key: key,
+            value: val,
+        })
     }
 
     pub fn seek_to_end(&mut self) -> io::Result<u64> {
@@ -82,28 +85,26 @@ impl ActionKV {
             let maybe_kv = ActionKV::process_record(&mut f);
             let kv = match maybe_kv {
                 Ok(kv) => kv,
-                Err(err) => {
-                    match err.kind() {
-                        io::ErrorKind::UnexpectedEof => {
-                            break;
-                        },
-                        _ => return Err(err),
+                Err(err) => match err.kind() {
+                    io::ErrorKind::UnexpectedEof => {
+                        break;
                     }
+                    _ => return Err(err),
                 },
             };
 
             self.index.insert(kv.key, current_position);
-        };
+        }
 
         Ok(())
     }
 
     pub fn get_at(&mut self, position: u64) -> io::Result<KeyValuePair> {
-       let mut f = BufReader::new(&mut self.f);
-       f.seek(SeekFrom::Start(position))?;
-       let kv = Self::process_record(&mut f)?;
+        let mut f = BufReader::new(&mut self.f);
+        f.seek(SeekFrom::Start(position))?;
+        let kv = Self::process_record(&mut f)?;
 
-       Ok(kv)
+        Ok(kv)
     }
 
     pub fn get(&mut self, key: &ByteStr) -> io::Result<Option<ByteString>> {
@@ -121,7 +122,7 @@ impl ActionKV {
     }
 
     pub fn find(&mut self, target: &ByteStr) -> io::Result<Option<(u64, ByteString)>> {
-        todo!("")        
+        todo!("")
     }
 
     pub fn insert_but_ignore_index(&mut self, key: &ByteStr, value: &ByteStr) -> io::Result<u64> {
@@ -168,5 +169,3 @@ impl ActionKV {
         self.insert(key, b"")
     }
 }
-
-
