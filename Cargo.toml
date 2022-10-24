@@ -14,4 +14,5 @@ members = [
     "chp8/ch8-mget",
     "ch9/ch9-clock1",
     "ch9/ch9-clock2",
+    "ch9/ch9-clock3",
 ]

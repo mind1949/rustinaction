@@ -13,26 +13,21 @@ impl Display for MacAddress {
         write!(
             f,
             "{:02x}:{:02x}:{:02x}:{:02x}:{:02x}:{:02x}",
-            octet[0],
-            octet[1],
-            octet[2],
-            octet[3],
-            octet[4],
-            octet[5]
+            octet[0], octet[1], octet[2], octet[3], octet[4], octet[5]
         )
     }
 }
 
 impl MacAddress {
-    fn new() ->MacAddress {
-        let mut octets: [u8; 6] = [0;6];
+    fn new() -> MacAddress {
+        let mut octets: [u8; 6] = [0; 6];
         rand::thread_rng().fill_bytes(&mut octets);
         // 将地址设置为本地分配、单播模式
         octets[0] |= 0b_0000_0011;
-        MacAddress{0: octets}
+        MacAddress { 0: octets }
     }
 
-    fn is_local(&self) ->bool {
+    fn is_local(&self) -> bool {
         (self.0[0] & 0b_0000_0010) == 0b_0000_0010
     }
 
