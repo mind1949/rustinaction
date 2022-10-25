@@ -200,6 +200,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "ch10-render-hex"
+version = "0.1.0"
+dependencies = [
+ "svg",
+]
+
+[[package]]
 name = "ch6-particles"
 version = "0.1.0"
 dependencies = [
@@ -2442,6 +2449,12 @@ name = "strsim"
 version = "0.9.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6446ced80d6c486436db5c078dde11a9f73d42b57fb273121e160b84f63d894c"
+
+[[package]]
+name = "svg"
+version = "0.6.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1f57a11872ea3f38eb99622ef7877fe207b3eeefbe877a49f08f9995d00f34a5"
 
 [[package]]
 name = "syn"
