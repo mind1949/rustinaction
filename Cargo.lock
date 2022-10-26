@@ -200,9 +200,48 @@ dependencies = [
 ]
 
 [[package]]
+name = "ch10-channels-complex"
+version = "0.1.0"
+dependencies = [
+ "crossbeam",
+]
+
+[[package]]
+name = "ch10-channels-intro"
+version = "0.1.0"
+dependencies = [
+ "crossbeam",
+]
+
+[[package]]
 name = "ch10-render-hex"
 version = "0.1.0"
 dependencies = [
+ "svg",
+]
+
+[[package]]
+name = "ch10-render-hex-functional"
+version = "0.1.0"
+dependencies = [
+ "rayon",
+ "svg",
+]
+
+[[package]]
+name = "ch10-render-hex-parallel-iterator"
+version = "0.1.0"
+dependencies = [
+ "svg",
+]
+
+[[package]]
+name = "ch10-render-hex-threadpool"
+version = "0.1.0"
+dependencies = [
+ "crossbeam",
+ "crossbeam-utils 0.7.2",
+ "rayon",
  "svg",
 ]
 
@@ -524,6 +563,30 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b540bd8bc810d3885c6ea91e2018302f68baba2129ab3e88f32389ee9370880d"
 dependencies = [
  "cfg-if 1.0.0",
+]
+
+[[package]]
+name = "crossbeam"
+version = "0.7.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "69323bff1fb41c635347b8ead484a5ca6c3f11914d784170b158d8449ab07f8e"
+dependencies = [
+ "cfg-if 0.1.10",
+ "crossbeam-channel 0.4.4",
+ "crossbeam-deque 0.7.4",
+ "crossbeam-epoch 0.8.2",
+ "crossbeam-queue",
+ "crossbeam-utils 0.7.2",
+]
+
+[[package]]
+name = "crossbeam-channel"
+version = "0.4.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b153fe7cbef478c567df0f972e02e6d736db11affe43dfc9c56a9374d1adfb87"
+dependencies = [
+ "crossbeam-utils 0.7.2",
+ "maybe-uninit",
 ]
 
 [[package]]
@@ -2188,7 +2251,7 @@ version = "1.9.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "258bcdb5ac6dad48491bb2992db6b7cf74878b0384908af124823d118c99683f"
 dependencies = [
- "crossbeam-channel",
+ "crossbeam-channel 0.5.6",
  "crossbeam-deque 0.8.2",
  "crossbeam-utils 0.8.12",
  "num_cpus",

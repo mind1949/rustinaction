@@ -15,5 +15,10 @@ members = [
     "ch9/ch9-clock1",
     "ch9/ch9-clock2",
     "ch9/ch9-clock3",
-    "ch10/ch10-render-hex"
+    "ch10/ch10-render-hex",
+    "ch10/ch10-render-hex-functional",
+    "ch10/ch10-render-hex-parallel-iterator",
+    "ch10/ch10-channels-intro",
+    "ch10/ch10-channels-complex",
+    "ch10/ch10-render-hex-threadpool",
 ]
