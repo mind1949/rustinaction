@@ -246,6 +246,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "ch12-basic-handler"
+version = "0.1.0"
+dependencies = [
+ "libc",
+]
+
+[[package]]
+name = "ch12-fn-ptr-demo-2"
+version = "0.1.0"
+
+[[package]]
+name = "ch12-sixty"
+version = "0.1.0"
+
+[[package]]
 name = "ch6-particles"
 version = "0.1.0"
 dependencies = [

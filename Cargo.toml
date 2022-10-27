@@ -21,4 +21,7 @@ members = [
     "ch10/ch10-channels-intro",
     "ch10/ch10-channels-complex",
     "ch10/ch10-render-hex-threadpool",
+    "ch12/ch12-sixty",
+    "ch12/ch12-basic-handler",
+    "ch12/ch12-fn-ptr-demo-2",
 ]
