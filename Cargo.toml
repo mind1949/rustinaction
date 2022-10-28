@@ -24,4 +24,5 @@ members = [
     "ch12/ch12-sixty",
     "ch12/ch12-basic-handler",
     "ch12/ch12-fn-ptr-demo-2",
+    "ch12/ch12-sjlj",
 ]

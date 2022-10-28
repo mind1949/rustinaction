@@ -1,5 +1,5 @@
 fn main() {
-    // 
+    //
     let fn_ptr = noop as usize;
     // noop 的类型就是 *const fn() -> ()
     // 常量函数指针，意味着不可变

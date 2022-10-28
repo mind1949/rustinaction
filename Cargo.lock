@@ -261,6 +261,13 @@ name = "ch12-sixty"
 version = "0.1.0"
 
 [[package]]
+name = "ch12-sjlj"
+version = "0.1.0"
+dependencies = [
+ "libc",
+]
+
+[[package]]
 name = "ch6-particles"
 version = "0.1.0"
 dependencies = [

@@ -7,7 +7,7 @@ use std::thread;
 fn main() {
     let (tx, rx) = unbounded();
 
-    thread::spawn(move || { 
+    thread::spawn(move || {
         tx.send(42).unwrap();
     });
 
